@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>SLICE — Fruit Ninja Site</title>
-<meta name="description" content="Slice the fruit, splatter into the page. A bright, vibrant fruit-slicing website.">
+<title>SplitCitrus — A Juicery</title>
+<meta name="description" content="SplitCitrus is a bright, interactive juicery. Slice a fruit to enter.">
 <meta name="theme-color" content="#fffdf7">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%237cf03d'/%3E%3Cpath d='M32 4a28 28 0 0 0 0 56Z' fill='%23ff2e63'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -246,73 +246,61 @@ body.on-home footer{display:none}
 <div id="splash" aria-hidden="true"></div>
 
 <header class="bar">
-  <a class="brand" href="#home" data-go="home"><span class="dot"></span><span>SLICE<b>NINJA</b></span></a>
+  <a class="brand" href="#landing" data-go="landing"><span class="dot"></span><span>SPLIT<b>CITRUS</b></span></a>
   <nav class="nav">
-    <a href="#home" data-go="home">Fruit</a>
-    <a href="#arcade" data-go="arcade">Arcade</a>
-    <a href="#scores" data-go="scores">Scores</a>
+    <a href="#home" data-go="home">Home</a>
+    <a href="#order" data-go="order">Order</a>
     <a href="#about" data-go="about">About</a>
     <a href="#contact" data-go="contact">Contact</a>
   </nav>
 </header>
 
 <main>
-  <!-- ═══ HOME — the fruit range ═══ -->
-  <section class="page on" id="home">
-    <div class="wrap" style="pointer-events:none">
-      <p class="eyebrow" data-toss>SLICE THE FRUIT TO OPEN THE SITE</p>
+  <!-- ═══ LANDING — slice a fruit to enter ═══ -->
+  <section class="page on" id="landing">
+    <div class="wrap" style="pointer-events:none"></div>
+  </section>
+
+  <!-- ═══ HOME ═══ -->
+  <section class="page" id="home" style="--accent:var(--lime)">
+    <div class="wrap">
+      <p class="eyebrow" data-toss>FRESH-PRESSED · MADE TO ORDER</p>
       <h1 class="big" data-toss>CUT IT<br><em>OPEN.</em></h1>
-      <p class="lead" data-toss style="--ty:60px">Every page hides inside a piece of fruit. <b>Flick across the screen</b> and
-      the juice splatters you straight through to it.</p>
+      <p class="lead" data-toss style="--ty:60px">Welcome to <b>SplitCitrus</b> — a juicery built around bright fruit, cold-pressed blends,
+      citrus shots, smoothies, and the satisfying idea that your drink should start with something fresh.</p>
       <div class="row" data-toss>
-        <button class="btn" data-rush>▶ Start 30s rush</button>
-        <button class="btn ghost" data-go="arcade">Browse pages</button>
-      </div>
-      <div class="row" style="margin-top:.6rem" data-toss>
-        <span class="hint"><i></i> Drag fast — slow moves won't cut</span>
-        <div class="stat"><b id="sSlices">0</b><span>Slices</span></div>
-        <div class="stat"><b id="sBest">0</b><span>Best combo</span></div>
-        <div class="stat"><b id="sTop">0</b><span>Top score</span></div>
+        <button class="btn" data-go="order">Order juice</button>
+        <button class="btn ghost" data-go="about">Our story</button>
       </div>
     </div>
   </section>
 
-  <!-- ═══ ARCADE ═══ -->
-  <section class="page" id="arcade" style="--accent:var(--orange)">
+  <!-- ═══ ORDER ═══ -->
+  <section class="page" id="order" style="--accent:var(--orange)">
     <div class="wrap">
-      <p class="eyebrow" data-toss>01 — THE ARCADE</p>
-      <h2 class="big" data-toss>THROW<br><i>DOWN.</i></h2>
-      <p class="lead" data-toss>One mode, thirty seconds, no second chances. Fruit and bombs fly at you —
-      <b>melons score, bombs end the run.</b></p>
-
+      <p class="eyebrow" data-toss>01 — ORDER</p>
+      <h2 class="big" data-toss>PICK YOUR<br><i>POUR.</i></h2>
+      <p class="lead" data-toss>Fresh fruit, pressed cold and built to order. Choose a house favorite or mix your own.</p>
       <div class="grid c3">
-        <div class="card tile" data-toss style="--accent:var(--lime)">
-          <span class="chip">MODE</span><h3>Rush</h3>
-          <p>30 seconds. Chain slices without dropping anything to build a multiplier.</p>
-          <button class="go" data-rush>Play rush</button>
+        <div class="card tile" data-toss style="--accent:var(--orange)">
+          <span class="chip">CITRUS</span><h3>Sun Split</h3>
+          <p>Orange · pineapple · lemon · ginger. Bright, sharp, and made for mornings.</p>
+          <button class="go">Add — $8</button>
         </div>
-        <div class="card tile" data-toss style="--accent:var(--cyan)">
-          <span class="chip">RULES</span><h3>Combos</h3>
-          <p>Slice again within a heartbeat and the chain climbs. 3+ in a row pays a bonus.</p>
-          <button class="go" data-rush>Try it</button>
+        <div class="card tile" data-toss style="--accent:var(--lime)">
+          <span class="chip">GREEN</span><h3>Green Cut</h3>
+          <p>Apple · cucumber · lime · spinach · mint. Crisp without tasting like lawn.</p>
+          <button class="go">Add — $9</button>
         </div>
         <div class="card tile" data-toss style="--accent:var(--pink)">
-          <span class="chip">WARNING</span><h3>Bombs</h3>
-          <p>Black, grinning, and instantly fatal. Flicking one blows the whole run up.</p>
-          <button class="go" data-rush>Good luck</button>
+          <span class="chip">BERRY</span><h3>Red Slice</h3>
+          <p>Strawberry · watermelon · lime · basil. Cold, clean, and dangerously easy.</p>
+          <button class="go">Add — $8</button>
         </div>
       </div>
-
-      <div class="card" data-toss style="margin-top:1.4rem;--accent:var(--yellow)">
-        <h3 style="font-family:var(--f-d);font-size:1.4rem;text-transform:uppercase;margin-bottom:.7rem">How to play</h3>
-        <div class="grid c2" style="gap:.6rem">
-          <p style="color:var(--ink-soft);font-size:.94rem"><b>Drag</b> with a mouse, finger or stylus. Speed is what makes the cut.</p>
-          <p style="color:var(--ink-soft);font-size:.94rem"><b>Escape</b> bails you out at any time and drops you back on the fruit.</p>
-        </div>
-        <div class="row" style="margin-top:1.1rem">
-          <button class="btn pink" data-rush>Start a run</button>
-          <button class="btn ghost" data-go="home">← Back to the fruit</button>
-        </div>
+      <div class="card" data-toss style="margin-top:1.4rem;background:var(--yellow)">
+        <h3 style="font-family:var(--f-d);font-size:1.5rem;text-transform:uppercase;margin-bottom:.6rem">Build your own</h3>
+        <p class="lead" style="margin:0">Pick three fruits, one boost, and one finish. We press it when you order it.</p>
       </div>
     </div>
   </section>
@@ -346,30 +334,27 @@ body.on-home footer{display:none}
   <!-- ═══ ABOUT ═══ -->
   <section class="page" id="about" style="--accent:var(--cyan)">
     <div class="wrap">
-      <p class="eyebrow" data-toss>03 — THE BLADE</p>
-      <h2 class="big" data-toss>NO IMAGES.<br><i>ALL KNIFE.</i></h2>
+      <p class="eyebrow" data-toss>02 — ABOUT</p>
+      <h2 class="big" data-toss>FRUIT FIRST.<br><i>NOT FUSS.</i></h2>
       <div class="grid c2">
         <div class="card" data-toss>
-          <p class="lead" style="margin:0">This whole site is one canvas and a fistful of maths. Every melon, every seed and
-          every droplet of juice is drawn live at your screen's pixel density — <b>there isn't a single image file in it.</b></p>
-          <p class="lead" style="margin:1rem 0 0">The cut is honest geometry: your swipe angle becomes a line through the fruit,
-          the flesh underneath is redrawn, and the two halves fly apart along the normal of your stroke. No two slices repeat.</p>
+          <p class="lead" style="margin:0">SplitCitrus is a neighborhood juicery built around fresh produce and drinks made when you ask for them.</p>
+          <p class="lead" style="margin:1rem 0 0">No mysterious neon powder pretending to be fruit. Just citrus, greens, berries, roots, herbs, ice, and a very loud blender when needed.</p>
         </div>
         <div class="card" data-toss style="--accent:var(--lime)">
           <ul class="specs">
-            <li><span>Rendering</span><b>Canvas 2D</b></li>
-            <li><span>Resolution</span><b>Device-native</b></li>
-            <li><span>Audio</span><b>WebAudio synth</b></li>
-            <li><span>Images</span><b>Zero</b></li>
-            <li><span>Dependencies</span><b>None</b></li>
-            <li><span>Input</span><b>Mouse · touch · pen</b></li>
-            <li><span>Keyboard</span><b>1–4 jump · Esc back</b></li>
+            <li><span>Pressed</span><b>To order</b></li>
+            <li><span>Fruit</span><b>Fresh daily</b></li>
+            <li><span>Sweeteners</span><b>Optional</b></li>
+            <li><span>Shots</span><b>Ginger · turmeric</b></li>
+            <li><span>Pickup</span><b>Fast</b></li>
+            <li><span>Vibe</span><b>Bright + simple</b></li>
           </ul>
         </div>
       </div>
       <div class="row" data-toss style="margin-top:1.4rem">
-        <button class="btn cyan" data-go="contact">Say hello</button>
-        <button class="btn ghost" data-go="home">← Back to the fruit</button>
+        <button class="btn cyan" data-go="order">See the menu</button>
+        <button class="btn ghost" data-go="contact">Contact us</button>
       </div>
     </div>
   </section>
@@ -377,36 +362,30 @@ body.on-home footer{display:none}
   <!-- ═══ CONTACT ═══ -->
   <section class="page" id="contact" style="--accent:var(--pink)">
     <div class="wrap">
-      <p class="eyebrow" data-toss>04 — GET IN TOUCH</p>
-      <h2 class="big" data-toss>TOSS US<br><i>A LINE.</i></h2>
+      <p class="eyebrow" data-toss>03 — CONTACT</p>
+      <h2 class="big" data-toss>COME GET<br><i>JUICED.</i></h2>
       <div class="grid c2">
         <div class="card" data-toss>
           <form class="form" id="form" novalidate>
             <div class="field"><label for="n">Name</label><input id="n" placeholder="Your name"><small class="err" data-e="n"></small></div>
             <div class="field"><label for="e">Email</label><input id="e" type="email" placeholder="you@example.com"><small class="err" data-e="e"></small></div>
-            <div class="field"><label for="m">Message</label><textarea id="m" placeholder="What did you slice?"></textarea><small class="err" data-e="m"></small></div>
+            <div class="field"><label for="m">Message</label><textarea id="m" placeholder="Questions, catering, big orders..."></textarea><small class="err" data-e="m"></small></div>
             <div class="row">
-              <button class="btn pink" type="submit">Throw it</button>
-              <span class="note">Checked in your browser — nothing is sent anywhere.</span>
+              <button class="btn pink" type="submit">Send it</button>
+              <span class="note">Demo contact form — nothing is sent.</span>
             </div>
           </form>
-          <div class="ok" id="ok" hidden>✓ Message launched. It cleared the wall — we'll be in touch.</div>
+          <div class="ok" id="ok" hidden>✓ Got it. SplitCitrus will be in touch.</div>
         </div>
         <div class="card" data-toss style="--accent:var(--yellow)">
           <ul class="specs">
-            <li><span>Email</span><b>hey@sliceninja.site</b></li>
-            <li><span>Hours</span><b>Mon–Fri 9–6</b></li>
-            <li><span>Reply</span><b>Within a day</b></li>
-            <li><span>Form</span><b>Runs in your browser</b></li>
-            <li><span>Tracking</span><b>None, ever</b></li>
+            <li><span>Email</span><b>hello@splitcitrus.com</b></li>
+            <li><span>Hours</span><b>Daily 8–7</b></li>
+            <li><span>Pickup</span><b>Order ahead</b></li>
+            <li><span>Catering</span><b>Available</b></li>
           </ul>
-          <div class="card" style="margin-top:1.3rem;background:var(--lime);box-shadow:4px 4px 0 var(--ink)">
-            <p style="font-family:var(--f-d);font-size:1.15rem;text-transform:uppercase;letter-spacing:.04em;line-height:1.25">
-              Found all four pages? You're a blade.</p>
-            <p class="note" style="margin-top:.5rem;color:var(--ink)">Slice your way back to the fruit and see what's left.</p>
-          </div>
           <div class="row" style="margin-top:1.3rem">
-            <button class="btn ghost" data-go="home">← Back to the fruit</button>
+            <button class="btn ghost" data-go="order">Order something fresh</button>
           </div>
         </div>
       </div>
@@ -436,8 +415,8 @@ body.on-home footer{display:none}
 </div>
 
 <footer>
-  <span>SLICE NINJA — slice the fruit, splatter through the site.</span>
-  <span>Canvas 2D · WebAudio · 0 images</span>
+  <span>SPLITCITRUS — slice in, juice out.</span>
+  <span>Fresh juice · made to order</span>
 </footer>
 
 <script>
@@ -712,8 +691,8 @@ window.addEventListener('resize',resize);
 resize();
 
 /* ══════════════ state ══════════════ */
-var PAGES=['home','arcade','scores','about','contact'];
-var CUR='home',booting=true;
+var PAGES=['landing','home','order','about','contact'];
+var CUR='landing',booting=true;
 var MODE='nav';           // nav | rush | idle
 var fruits=[],halves=[],drops=[],boks=[];
 var trail=[],LAST=null,bladeSpd=0,TRAIL=190;
@@ -804,22 +783,24 @@ function launch(o){
     rot:Math.random()*TAU,vr:rand(-2.6,2.6),page:o.page||null,
     bomb:!!o.bomb,gold:!!o.gold,born:0});
 }
+var navWaveActive=false;
 function waveNav(){
-  var here=CUR;
-  var dests=shuffle(PAGES.filter(function(p){return p!==here;}));
-  var wide=W>=560;
-  var n=clamp(dests.length,3,wide?4:3);
-  var items=[];
-  for(var i=0;i<n;i++)items.push({page:dests[i]});
-  if(wide&&Math.random()<.14)items.push({gold:true});
-  items=shuffle(items);
-  for(var k=0;k<items.length;k++){
-    var it=items[k],r=fruitR()*(it.gold?.82:rand(.9,1.1));
-    var pad=r+Math.max(30,W*.05);
-    var x=items.length>1?pad+(k/(items.length-1))*(W-pad*2):W/2;
-    launch({r:r,x:x,peak:H*rand(.6,.86),vx:(W/2-x)*.2+rand(-70,70),
-      type:it.bomb?'bomb':pick(Object.keys(FT)),page:it.page,gold:it.gold});
+  if(navWaveActive)return;
+  navWaveActive=true;
+  var dests=['home','order','about','contact'];
+  var xs=[.18,.39,.62,.82];
+  for(let k=0;k<dests.length;k++){
+    (function(page,idx){
+      setTimeout(function(){
+        if(MODE!=='nav'||CUR!=='landing')return;
+        var r=fruitR()*rand(.9,1.08);
+        var x=W*xs[idx]+rand(-W*.035,W*.035);
+        launch({r:r,x:x,peak:H*rand(.46,.62),vx:(W/2-x)*.10+rand(-35,35),
+          type:pick(Object.keys(FT)),page:page});
+      },idx*780);
+    })(dests[k],k);
   }
+  setTimeout(function(){navWaveActive=false;},5600);
 }
 function waveRush(){
   var size=Math.min(4,1+Math.floor(elapsed/10));
@@ -948,8 +929,8 @@ function update(dt){
   updDrops(dt);
 
   if(MODE==='nav'){
-    if(fruits.length===0&&!pendingNav){spawnT-=dt;if(spawnT<=0){waveNav();spawnT=.5;}}
-    else if(fruits.length>0)spawnT=.24;
+    spawnT-=dt;
+    if(!pendingNav&&spawnT<=0){waveNav();spawnT=5.8;}
     elapsed+=dt;
     if(elapsed-lastSlice>.42)combo=0;
   }else if(MODE==='rush'&&!over){
@@ -1086,7 +1067,7 @@ function splat(x,y,color,dur,cb,rot){
 /* ══════════════ router ══════════════ */
 function go(page,opt){
   opt=opt||{};
-  if(PAGES.indexOf(page)<0)page='home';
+  if(PAGES.indexOf(page)<0)page='landing';
   if(page===CUR)return;
   resume();SFX.whoosh();
   stopRush(true);
@@ -1101,7 +1082,7 @@ function go(page,opt){
 }
 
 function accent(p){
-  return p==='arcade'?'#ff8a00':p==='scores'?'#8b2eff':p==='about'?'#00d4ff':p==='contact'?'#ff2e63':'#7cf03d';
+  return p==='order'?'#ff8a00':p==='about'?'#00d4ff':p==='contact'?'#ff2e63':'#7cf03d';
 }
 
 function apply(page,hist){
@@ -1136,10 +1117,10 @@ function apply(page,hist){
   }
 
   window.scrollTo(0,0);
-  document.body.classList.toggle('on-home',page==='home');
-  document.body.classList.toggle('is-game',page==='home');
-  MODE=(page==='home')?'nav':'idle';
-  if(page==='home'){spawnT=.35;elapsed=0;lastSlice=-99;combo=0;}
+  document.body.classList.toggle('on-home',page==='landing');
+  document.body.classList.toggle('is-game',page==='landing');
+  MODE=(page==='landing')?'nav':'idle';
+  if(page==='landing'){spawnT=.45;elapsed=0;lastSlice=-99;combo=0;navWaveActive=false;}
   remember(page);
   if(page==='scores')paintScores();
   makeSplats(cur,accent(page));
@@ -1274,11 +1255,7 @@ document.getElementById('wipe').addEventListener('click',function(){
   stats={slices:0,combo:0,top:0,runs:[],pages:[]};save('sn',stats);paintScores();SFX.ui();
 });
 
-function paintHome(){
-  document.getElementById('sSlices').textContent=fmt(stats.slices||0);
-  document.getElementById('sBest').textContent='×'+(stats.combo||0);
-  document.getElementById('sTop').textContent=fmt(stats.top||0);
-}
+function paintHome(){}
 setInterval(paintHome,700);
 
 /* ══════════════ form ══════════════ */
@@ -1306,18 +1283,18 @@ document.addEventListener('keydown',function(e){
   if(tg==='input'||tg==='textarea'||tg==='select')return;
   if(e.key==='Escape'){
     if(MODE==='rush')stopRush();
-    if(CUR!=='home')go('home',{color:'#7cf03d'});
+    if(CUR!=='landing')go('landing',{color:'#7cf03d'});
     return;
   }
   if(e.key>='1'&&e.key<='4'){go(PAGES[parseInt(e.key,10)],{});}
-  if(e.key==='0'){go('home',{});}
-  if(e.key===' '&&CUR==='home'){e.preventDefault();startRush();}
+  if(e.key==='0'){go('landing',{});}
+  if(e.key===' '&&CUR==='landing'){e.preventDefault();}
 });
 
 /* ══════════════ history ══════════════ */
 function route(){
   var p=(location.hash||'').replace('#','');
-  if(PAGES.indexOf(p)<0)p='home';
+  if(PAGES.indexOf(p)<0)p='landing';
   if(p===CUR)return;
   go(p,{hist:'none',color:accent(p)});
 }
@@ -1326,8 +1303,8 @@ window.addEventListener('hashchange',route);
 
 /* ══════════════ boot ══════════════ */
 var h=(location.hash||'').replace('#','');
-if(PAGES.indexOf(h)>=0&&h!=='home'){apply(h,'replace');}
-else{apply('home','replace');}
+if(PAGES.indexOf(h)>=0&&h!=='landing'){apply(h,'replace');}
+else{apply('landing','replace');}
 booting=false;
 paintHome();
 })();
